@@ -83,7 +83,6 @@
         .navbar button:hover {
             background-color: #f1c40f;
         }
-
         .container {
             padding: 20px;
             background: rgba(0, 0, 0, 0.2);
@@ -111,6 +110,43 @@
             margin: 0;
             line-height: 1;
         }
+
+        .title h2 {
+            margin: 0;
+            line-height: 1;
+        }
+
+        .results-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .result-item {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            color: white;
+            padding: 15px;
+            margin: 10px;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .result-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .result-item h3 {
+            margin: 10px 0;
+        }
+
+        .result-item p {
+            margin: 0;
+        }
     </style>
 </head>
 <body>
@@ -124,9 +160,9 @@
             <a href="contactus.html">Contact Us</a>
         </div>
         <div class="search-container">
-            <input type="text" placeholder="Search...">
-            <button type="button">Search</button>
-            <button type="button">Clear Results</button>
+            <input type="text" id="search-input" placeholder="Search...">
+            <button id="search-btn" type="button">Search</button>
+            <button id="clear-btn" type="button">Clear Results</button>
         </div>
     </div>
     
@@ -140,5 +176,11 @@
         Whether you are traveling for business or leisure, Stratos provides a range of amenities and services designed to meet your needs.
         Discover the difference with Stratos, where we go beyond the ordinary to make your travels extraordinary.
     </div>
+
+    <div class="results-container" id="results-container">
+        <!-- Search results will be displayed here -->
+    </div>
+
+    <script src="stratos.js"></script>
 </body>
 </html>
