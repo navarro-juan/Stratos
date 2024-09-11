@@ -71,21 +71,79 @@
         .navbar button:hover {
             background-color: #f1c40f; /* Slightly darker yellow */
         }
+
+        .team-section {
+            position:absolute;
+            bottom:00px;
+            left:100px;
+            color:white;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 100px;
+            height:200px;
+            width:1000px;
+            margin: 0 auto;
+            padding: 10px;
+            position:absolute;
+            left:200px;
+            bottom:50px;
+        }
+
+        .team-tile {
+            background-color:rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            width:200px;
+            height:200px;
+            color:white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding:20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .team-tile:hover {
+            transform: scale(1.05);
+        }
+
+        .team-tile img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .team-tile h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .team-tile p {
+            font-size: 1rem;
+            color: #555;
+        }
+
         .info {
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.5)
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.5);
             border-radius: 8px;
             position: absolute;
-            bottom: 560px;
-            left: 70px;
+            bottom: 510px;
+            left: 250px;
             max-width: 1000px;
             color: white;
+            font-size:16px;
             font-weight: normal;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             letter-spacing: -0.5px;
             word-spacing: -1px;
-            font: size 12px;
+            font-size: 16px;
         }
+
         .title {
             padding: 0;
             color: white;
@@ -93,16 +151,52 @@
             font-size: 30px;
             font-family: Arial, sans-serif;
             position: absolute;
-            bottom: 720px;
-            left: 75px;
+            bottom: 620px;
+            left: 650px;
             letter-spacing: -0.5px;
             word-spacing: -1px;
         }
-        .title h2 {
-            margin: 0;
-            line-height: .1;
+
+        .team {
+            padding: 5px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            position: absolute;
+            max-width: 1000px;
+            color: white;
+            font-weight: normal;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            letter-spacing: -0.5px;
+            word-spacing: -1px;
+            font-size: 12px;
         }
-       
+
+        .team h2 {
+            left: 100px;
+            bottom: 100px;
+        }
+
+        .team-section h1 {
+            position:absolute;
+            left:600px;
+            bottom:420px;
+            width:300px;
+            color:white;
+            font-size: 30px;
+            font-weight:bolder;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            letter-spacing: -0.5px;
+            word-spacing: -1px;
+
+        }
+
+        @media (max-width: 600px) {
+            .team-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -115,24 +209,46 @@
             <a href="aboutus.html">About Us</a>
             <a href="contactus.html">Contact Us</a>
         </div>
-       
     </div>
     
     <div class="title">
         <h2>ABOUT US</h2>
-        
     </div>
 
     <div class="info">
-At Stratos, we're revolutionizing the way you travel. Leveraging cutting-edge artificial intelligence,
-our modern travel agency specializes in seamlessly matching you with your ideal destination and the best deals available.
-Whether you're dreaming of a serene getaway, an adventurous escapade, or a chic city break, Stratos uses advanced AI algorithms to tailor recommendations specifically to your preferences and budget.
-Say goodbye to hours of searching and hello to effortless travel planning with Stratos,<b> where your perfect journey is just a click away.</b>
+        At Stratos, we're revolutionizing the way you travel. Leveraging cutting-edge artificial intelligence,
+        our modern travel agency specializes in seamlessly matching you with your ideal destination and the best deals available.
+        Whether you're dreaming of a serene getaway, an adventurous escapade, or a chic city break, Stratos uses advanced AI algorithms to tailor recommendations specifically to your preferences and budget.
+        Say goodbye to hours of searching and hello to effortless travel planning with Stratos, <b>where your perfect journey is just a click away.</b>
     </div>
-    <div class="team"> <!--START HERE create the team section and div class settings -->
-    
- 
-           
-    
+
+    <section class="team-section">
+        <h1>OUR TEAM</h1>
+        <div class="team-container">
+          <!-- Team Member 1 -->
+          <div class="team-tile">
+            <img src="https://static.hbo.com/content/dam/hbodata/series/silicon-valley/characters/s3/gilfoyle-1920.jpg" alt="Team Member 1">
+            <h3>Gilfoyle</h3>
+            <p>Software Engineer</p>
+            <p>Gilfoyle specializes in front-end development and systems engineering.</p>
+          </div>
+          
+          <!-- Team Member 2 -->
+          <div class="team-tile">
+            <img src="https://media.themoviedb.org/t/p/w500/9EyrK1Cv7ey1h1GgmsVAOn45w6G.jpg" alt="Team Member 2">
+            <h3>Dinesh</h3>
+            <p>Software Developer</p>
+            <p>Dinesh specializes in back-end development and machine learning.</p>
+          </div>
+           <!-- Team Member 3 -->
+           <div class="team-tile">
+            <img src="https://www.chicagotribune.com/wp-content/uploads/migration/2019/11/12/PQNUPVH7NRDZ7ABBKGLS7W5FDQ.jpg" alt="Team Member 3">
+            <h3>Jared</h3>
+            <p>Operations Manager</p>
+            <p> Jared manages operations and helps streamline the company's growth and development.</p>
+          </div>
+          <!-- Add more team members as needed -->
+        </div>
+    </section>
 </body>
 </html>
