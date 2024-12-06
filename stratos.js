@@ -42,8 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Filter results based on the search query
         const filteredResults = results.filter(result => 
-            result.name.toLowerCase().includes(query) ||
-            result.description.toLowerCase().includes(query)
+            result.name.toLowerCase().includes(query) 
         );
 
         displayResults(filteredResults);
