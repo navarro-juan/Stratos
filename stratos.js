@@ -55,8 +55,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Event Listeners
-    searchBtn.addEventListener('click', search); // Search button click
-    clearBtn.addEventListener('click', function () {
+    searchBtn.addEventListener('submit', search); //
+    clearBtn.addEventListener('submit', function () {
         searchInput.value = ''; // Clear input
         resultsContainer.innerHTML = ''; // Clear results
     });
